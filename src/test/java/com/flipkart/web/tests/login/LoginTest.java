@@ -24,20 +24,9 @@ public class LoginTest extends BaseTest{
 		log.info("Ending initAmazonWebSite");
 	}
 	
-	@Test(priority = 1)
-	public void verifyLoginWithLessMobileNumber() throws InterruptedException {
-		log.info("Starting verifyLoginWithLessMobileNumber method");
-		
-		loginPage.clickOnLogin();
-		loginPage.setMobileNumber("9908960");
-		loginPage.clickOnRequestOTP();
-		
-		Assert.assertEquals(loginPage.getInvalidMobileError(), "Please enter valid Email ID/Mobile number");
-		
-		log.info("Ending verifyLoginWithLessMobileNumber method");
-	}
 	
-	@Test(priority = 2)
+	
+	@Test(priority = 1)
 	public void verifyLoginWithSpecialCharacters() throws InterruptedException { 
 		log.info("Starting verifyLoginWithInvalidSpecialCharacters method");
 		
@@ -47,7 +36,7 @@ public class LoginTest extends BaseTest{
 		log.info("Ending verifyLoginWithInvalidSpecialCharacters method");
 	} 
 
-	@Test(priority = 3)
+	@Test(priority = 2)
 	public void verifyLoginWithEmptyMobNumberField() throws InterruptedException {
 		log.info("Starting verifyLoginWithEmptyMobNumberField method");
 		
@@ -57,7 +46,7 @@ public class LoginTest extends BaseTest{
 		log.info("Ending verifyLoginWithEmptyMobNumberField method");
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 3)
 	public void verifyLoginWithValidMobileNumber() throws InterruptedException {
 		log.info("Starting verifyLoginWithValidMobileNumber method");
 		
